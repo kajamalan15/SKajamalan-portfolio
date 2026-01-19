@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Kajamalan Sathiyalingam - Data Science Undergraduate, Machine Learning Engineer Portfolio">
+  <meta name="keywords" content="Data Science, Machine Learning, Python, NLP, CNN, AI, Flask, Streamlit">
+  <meta name="author" content="Kajamalan Sathiyalingam">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kajamalan | Data Science Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="dark">
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="brand">
+        <span class="brand-badge">KS</span>
+        <span class="brand-text">
+          <span class="brand-name">Kajamalan</span>
+          <span class="brand-sub">Data Science</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#certifications" class="nav-link">Certificates</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="theme-btn" onclick="toggleDark()" title="Toggle theme">
+        <span id="themeIcon">🌙</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="hero-inner">
+
+      <!-- Left: Profile -->
+      <div class="hero-left">
+        <div class="profile-ring">
+          <img src="profile.JPG" alt="Kajamalan Sathiyalingam" class="profile-img" />
+        </div>
+      </div>
+
+      <!-- Right: Intro -->
+      <div class="hero-right">
+        <h1 class="hero-title">
+          Hi, I’m <span class="accent">Kajamalan Sathiyalingam</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          BSc (Hons) Information Technology Specialization in Data Science | ML Engineer | AI Researcher
+        </p>
+
+        <!-- Pills -->
+        <div class="pill-row">
+          <span class="pill">Artificial Intelligence</span>
+          <span class="pill">Machine Learning</span>
+          <span class="pill">NLP</span>
+          <span class="pill">Deep Learning</span>
+          <span class="pill">Data Analytics</span>
+          <span class="pill">Python</span>
+        </div>
+
+        <!-- Info Cards -->
+        <div class="info-grid">
+          <div class="glass info-card">
+            <div class="info-head">📍 Location</div>
+            <div class="info-value">Western Province, Colombo, Srilanka</div>
+          </div>
+          <div class="glass info-card">
+            <div class="info-head">🧠 Expertise</div>
+            <div class="info-value">Artificial Intelligence · Machine Learning · NLP · Deep Learning · Analytics</div>
+          </div>
+          <div class="glass info-card">
+            <div class="info-head">✉️ Contact</div>
+            <a class="info-value link" href="mailto:kajamalan27@gmail.com">kajamalan27@gmail.com</a>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-row">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+          <a href="Kajamalan_CV.pdf" download class="btn btn-soft">Download Resume</a>
+        </div>
+
+        <!-- Social -->
+        <div class="social-row">
+          <a class="social-circle" href="https://github.com/kajamalan15" target="_blank" title="GitHub" rel="noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a class="social-circle" href="https://www.linkedin.com/in/kajamalan-sathiyalingam-02a521282" target="_blank" title="LinkedIn" rel="noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+          <a class="social-circle" href="mailto:kajamalan27@gmail.com" title="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+          <a class="social-circle" href="https://wa.me/0779268585" target="_blank" title="WhatsApp" rel="noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a8.06 8.06 0 00-8.062 8.062c0 1.409.369 2.791 1.076 4.017l-1.104 4.041 4.147-1.087c1.233.661 2.632 1.01 4.048 1.01h.004c4.448 0 8.065-3.617 8.065-8.064 0-2.15-.853-4.17-2.404-5.689-1.551-1.519-3.595-2.357-5.742-2.357"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section-inner glass">
+      <h2 class="section-title">🚀 Projects</h2>
+      <p class="section-sub">A collection of my major works — blending AI, innovation, and data-driven systems.</p>
+
+      <div class="cards-grid">
+        <!-- Project 1 -->
+        <article class="card">
+          <div class="card-media">📊</div>
+          <div class="card-body">
+            <h3 class="card-title">🔮 Stroke-prediction-Machine-learning</h3>
+            <p class="card-text">AI-powered system that interprets complex inputs into human-friendly insights using LLMs with context-aware analysis.</p>
+            <div class="chip-row">
+              <span class="chip">Python</span><span class="chip">NLP</span><span class="chip">LLM</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-mini btn-ghost" target="_blank" rel="noreferrer" href="https://github.com/kajamalan15/Stroke-prediction-Machine-learning">Code</a>
+              <a class="btn btn-mini btn-primary" href="#" aria-disabled="true">Live</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card">
+          <div class="card-media">💻</div>
+          <div class="card-body">
+            <h3 class="card-title">💻 movie-recommendation-system</h3>
+            <p class="card-text">Smart medicine reminder and health assistant platform with role-based users and emergency hospital/doctor support.</p>
+            <div class="chip-row">
+              <span class="chip">React</span><span class="chip">MongoDB</span><span class="chip">Full-Stack</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-mini btn-ghost" target="_blank" rel="noreferrer" href="https://github.com/kajamalan15/movie-recommendation-system">Code</a>
+              <a class="btn btn-mini btn-primary" href="#" aria-disabled="true">Live</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card">
+          <div class="card-media">📈</div>
+          <div class="card-body">
+            <h3 class="card-title">📈 Image-Classification-with-CNNs-and-Visual-Explanations-using-Grad-CAM</h3>
+            <p class="card-text">Predicts future demand using historical data to optimize inventory, reduce wastage, and improve planning decisions.</p>
+            <div class="chip-row">
+              <span class="chip">Python</span><span class="chip">Time-Series</span><span class="chip">ML</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-mini btn-ghost" target="_blank" rel="noreferrer" href="https://github.com/kajamalan15/Image-Classification-with-CNNs-and-Visual-Explanations-using-Grad-CAM">Code</a>
+              <a class="btn btn-mini btn-primary" href="#" aria-disabled="true">Live</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Keep the rest projects as your current ones (you can copy/paste) -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="section-inner glass">
+      <h2 class="section-title">🛠 Skills</h2>
+      <p class="section-sub">Skills are the foundation of effective problem-solving, enabling the transformation of ideas into practical solutions.</p>
+
+      <div class="skills-bubbles">
+        <div class="bubble">🐍<span>Python</span></div>
+        <div class="bubble">📊<span>SQL</span></div>
+        <div class="bubble">🤖<span>ML</span></div>
+        <div class="bubble">🧠<span>Deep Learning</span></div>
+        <div class="bubble">💬<span>NLP</span></div>
+        <div class="bubble">⚡<span>TensorFlow</span></div>
+        <div class="bubble">🔥<span>Flask</span></div>
+        <div class="bubble">🍃<span>MongoDB</span></div>
+        <div class="bubble">🔗<span>Git</span></div>
+      </div>
+
+      <div class="skill-cards">
+        <div class="glass skill-card">
+          <h3>Programming</h3>
+          <ul>
+            <li>Python</li><li>JAVA</li><li>C</li><li>C++</li><li>SQL</li><li>JavaScript</li><li>HTML/CSS</li>
+          </ul>
+        </div>
+
+        <div class="glass skill-card">
+          <h3>ML & AI</h3>
+          <ul>
+            <li>Artificial Intelligence</li><li>Machine Learning</li><li>Deep Learning</li><li>NLP</li><li>LLMs</li>
+          </ul>
+        </div>
+
+        <div class="glass skill-card">
+          <h3>Tools</h3>
+          <ul>
+            <li>TensorFlow</li><li>PyTorch</li><li>Scikit-learn</li><li>Pandas</li>
+          </ul>
+        </div>
+
+        <div class="glass skill-card">
+          <h3>Platforms</h3>
+          <ul>
+            <li>Flask</li><li>Streamlit</li><li>MongoDB</li><li>MySQL</li><li>Hugging Face</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section">
+    <div class="section-inner glass">
+      <h2 class="section-title">🏅 Certifications</h2>
+      <p class="section-sub">Explore my certifications — technical & cloud.</p>
+
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-top">🎓</div>
+          <h3>AI/ML Engineer</h3>
+          <p>SLIIT | Stage 1 & 2</p>
+          <span class="meta">2024 - Present</span>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-top">☁️</div>
+          <h3>Google Cloud</h3>
+          <p>AI & Machine Learning</p>
+          <span class="meta">2024</span>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-top">📊</div>
+          <h3>IBM Data Analytics</h3>
+          <p>IBM Certification</p>
+          <span class="meta">2024</span>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-top">☁️</div>
+          <h3>AWS Academy</h3>
+          <p>Cloud Foundations</p>
+          <span class="meta">2024</span>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-top">🔵</div>
+          <h3>Microsoft Azure</h3>
+          <p>ML Fundamentals</p>
+          <span class="meta">2024</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-inner glass">
+      <h2 class="section-title">👋 About Me</h2>
+
+      <div class="about-layout">
+        <div class="glass about-box">
+          <h3 class="accent-title">Kajamalan Sathiyalingam</h3>
+          <p>
+            Dedicated Data Science engineer specializing in Machine Learning, Natural Language Processing, and Deep Learning.
+            I build end-to-end ML systems, predictive models, and full-stack applications that deliver real business value.
+          </p>
+        </div>
+
+        <div class="glass about-box">
+          <h3 class="accent-title">Key Strengths</h3>
+          <ul class="ticks">
+            <li>Advanced ML model development & optimization</li>
+            <li>Data analysis & predictive analytics</li>
+            <li>NLP & Deep Learning experience</li>
+            <li>Full-stack ML app development</li>
+            <li>Problem solving with data-driven approach</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-inner glass center">
+      <h2 class="section-title">Let’s Connect & Collaborate 🤝</h2>
+      <p class="section-sub">Whether it’s a new project, a collaboration, or just to say hi — I’d love to hear from you!</p>
+
+      <div class="social-row big">
+        <a class="social-circle" href="https://github.com/kajamalan15" target="_blank" rel="noreferrer" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a class="social-circle" href="https://www.linkedin.com/in/kajamalan-sathiyalingam-02a521282" target="_blank" rel="noreferrer" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+        </a>
+        <a class="social-circle" href="mailto:kajamalan27@gmail.com" title="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <a class="social-circle" href="https://wa.me/919840506898" target="_blank" rel="noreferrer" title="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a8.06 8.06 0 00-8.062 8.062c0 1.409.369 2.791 1.076 4.017l-1.104 4.041 4.147-1.087c1.233.661 2.632 1.01 4.048 1.01h.004c4.448 0 8.065-3.617 8.065-8.064 0-2.15-.853-4.17-2.404-5.689-1.551-1.519-3.595-2.357-5.742-2.357"/></svg>
+        </a>
+      </div>
+
+      <form class="glass form" onsubmit="handleSubmit(event)">
+        <input class="input" type="text" placeholder="Your Name" required />
+        <input class="input" type="text" placeholder="Your Email or Phone" required />
+        <input class="input" type="text" placeholder="Subject" required />
+        <textarea class="input textarea" placeholder="Your Message..." rows="5" required></textarea>
+        <button class="btn btn-primary btn-wide" type="submit">🚀 Send Message</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Kajamalan Sathiyalingam. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Theme
+    function toggleDark() {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+      document.getElementById("themeIcon").textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const t = localStorage.getItem("theme");
+      if (t === "light") document.body.classList.remove("dark");
+      document.getElementById("themeIcon").textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
+    });
+
+    // Mobile menu
+    function toggleMenu(){
+      document.getElementById("navMenu").classList.toggle("open");
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener("click", (e) => {
+        const target = document.querySelector(a.getAttribute("href"));
+        if (!target) return;
+        e.preventDefault();
+        document.getElementById("navMenu").classList.remove("open");
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+
+    // Active link on scroll
+    const sections = ["home","projects","skills","certifications","about","contact"].map(id => document.getElementById(id));
+    const links = [...document.querySelectorAll(".nav-link")];
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if(!en.isIntersecting) return;
+        links.forEach(l => l.classList.remove("active"));
+        const id = en.target.id;
+        const active = links.find(l => l.getAttribute("href") === "#" + id);
+        if(active) active.classList.add("active");
+      });
+    }, { threshold: 0.45 });
+
+    sections.forEach(s => s && obs.observe(s));
+
+    // Fake submit (you can connect to Formspree later)
+    function handleSubmit(e){
+      e.preventDefault();
+      const note = document.getElementById("formNote");
+      note.textContent = "✅ Message captured! (Connect Formspree / EmailJS to actually send.)";
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
