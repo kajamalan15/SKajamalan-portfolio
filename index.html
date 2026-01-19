@@ -27,7 +27,7 @@
 
       <ul class="nav-menu" id="navMenu">
         <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#projects" class="nav-link" id="navProjects">Projects</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#certifications" class="nav-link">Certificates</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
@@ -89,7 +89,7 @@
 
         <!-- CTA -->
         <div class="cta-row">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#projects" class="btn btn-primary" id="ctaProjects">View My Work</a>
           <a href="#contact" class="btn btn-ghost">Get In Touch</a>
           <a href="Kajamalan_CV.pdf" download class="btn btn-soft">Download Resume</a>
         </div>
@@ -119,54 +119,234 @@
   <!-- PROJECTS -->
   <section id="projects" class="section">
     <div class="section-inner glass">
-      <h2 class="section-title">🚀 Projects</h2>
-      <p class="section-sub">A collection of my major works — blending AI, innovation, and data-driven systems.</p>
 
-      <div class="cards-grid">
-        <article class="card">
+      <div class="project-head">
+        <div>
+          <h2 class="section-title">🚀 Projects</h2>
+          <p class="section-sub">
+            A curated collection of academic, AI, machine learning, data science, and full-stack development projects.
+          </p>
+        </div>
+
+        <div class="project-tabs" role="tablist" aria-label="Project categories">
+          <button class="project-tab active" data-filter="main" role="tab" aria-selected="true">Main</button>
+          <button class="project-tab" data-filter="others" role="tab" aria-selected="false">Others</button>
+        </div>
+      </div>
+
+      <div class="cards-grid" id="projectGrid">
+
+        <!-- MAIN (3) -->
+        <article class="card project-item" data-category="main">
+          <div class="card-media">🧠</div>
+          <div class="card-body">
+            <h3 class="card-title">Stroke Prediction using Machine Learning</h3>
+            <p class="card-text">
+              Machine learning model developed at SLIIT to predict stroke risk using healthcare data.
+              Applied preprocessing, feature engineering, SMOTE for class imbalance, and classifiers
+              including Random Forest, SVM, and Logistic Regression with GridSearchCV optimization.
+            </p>
+            <div class="chip-row">
+              <span class="chip">Python</span>
+              <span class="chip">Scikit-learn</span>
+              <span class="chip">SMOTE</span>
+              <span class="chip">Healthcare AI</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-mini btn-ghost" target="_blank"
+                 href="https://github.com/kajamalan15/Stroke-prediction-Machine-learning">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-item" data-category="main">
+          <div class="card-media">🎬</div>
+          <div class="card-body">
+            <h3 class="card-title">Movie Recommendation System</h3>
+            <p class="card-text">
+              Personalized movie recommendation engine using Collaborative and Content-Based Filtering.
+              Implemented TF-IDF vectorization, cosine similarity, and nearest neighbors for accurate recommendations.
+            </p>
+            <div class="chip-row">
+              <span class="chip">Python</span>
+              <span class="chip">NLP</span>
+              <span class="chip">Recommender Systems</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-mini btn-ghost" target="_blank"
+                 href="https://github.com/kajamalan15/movie-recommendation-system">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-item" data-category="main">
+          <div class="card-media">🖼️</div>
+          <div class="card-body">
+            <h3 class="card-title">Image Classification with CNN & Grad-CAM</h3>
+            <p class="card-text">
+              Deep learning project using ResNet18 (PyTorch) for image classification.
+              Integrated Grad-CAM to visualize model attention and enhance explainability using XAI techniques.
+            </p>
+            <div class="chip-row">
+              <span class="chip">PyTorch</span>
+              <span class="chip">CNN</span>
+              <span class="chip">Grad-CAM</span>
+              <span class="chip">Explainable AI</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-mini btn-ghost" target="_blank"
+                 href="https://github.com/kajamalan15/Image-Classification-with-CNNs-and-Visual-Explanations-using-Grad-CAM">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- OTHERS (7) -->
+        <article class="card project-item" data-category="others">
+          <div class="card-media">🌍</div>
+          <div class="card-body">
+            <h3 class="card-title">Real-Time Climate Crisis News Classification</h3>
+            <p class="card-text">
+              Real-time NLP system that classifies climate-related news into Policy, Disasters,
+              Research, and Activism using NewsAPI, RSS feeds, and machine learning models.
+            </p>
+            <div class="chip-row">
+              <span class="chip">NLP</span>
+              <span class="chip">Streamlit</span>
+              <span class="chip">spaCy</span>
+              <span class="chip">NewsAPI</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-mini btn-ghost" target="_blank"
+                 href="https://github.com/kajamalan15/Classifying-Real-Time-Climate-Crisis-News-Articles">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-item" data-category="others">
+          <div class="card-media">✈️</div>
+          <div class="card-body">
+            <h3 class="card-title">Airline Sentiment Analysis using NLP</h3>
+            <p class="card-text">
+              NLP-based sentiment analysis of airline tweets using TF-IDF, Naïve Bayes,
+              and Random Forest classifiers to extract customer sentiment insights.
+            </p>
+            <div class="chip-row">
+              <span class="chip">NLP</span>
+              <span class="chip">Sentiment Analysis</span>
+              <span class="chip">TF-IDF</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-mini btn-ghost" target="_blank"
+                 href="https://github.com/kajamalan15/Airline-Sentiment-Analysis-NLP">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-item" data-category="others">
           <div class="card-media">📊</div>
           <div class="card-body">
-            <h3 class="card-title">🔮 Stroke-prediction-Machine-learning</h3>
-            <p class="card-text">AI-powered system that interprets complex inputs into human-friendly insights using LLMs with context-aware analysis.</p>
+            <h3 class="card-title">Product Sales Analysis Dashboard (Power BI)</h3>
+            <p class="card-text">
+              Interactive Power BI dashboard analyzing sales trends, customer behavior,
+              and regional performance using advanced data modeling and visualization techniques.
+            </p>
             <div class="chip-row">
-              <span class="chip">Python</span><span class="chip">NLP</span><span class="chip">LLM</span>
+              <span class="chip">Power BI</span>
+              <span class="chip">Data Analytics</span>
+              <span class="chip">Business Intelligence</span>
             </div>
             <div class="card-actions">
-              <a class="btn btn-mini btn-ghost" target="_blank" rel="noreferrer" href="https://github.com/kajamalan15/Stroke-prediction-Machine-learning">Code</a>
-              <a class="btn btn-mini btn-primary" href="#" aria-disabled="true">Live</a>
+              <a class="btn btn-mini btn-ghost" target="_blank"
+                 href="https://github.com/kajamalan15/Product-Sales-Analysis-Dashboard---Power-BI">Code</a>
             </div>
           </div>
         </article>
 
-        <article class="card">
-          <div class="card-media">💻</div>
-          <div class="card-body">
-            <h3 class="card-title">💻 movie-recommendation-system</h3>
-            <p class="card-text">Smart medicine reminder and health assistant platform with role-based users and emergency hospital/doctor support.</p>
-            <div class="chip-row">
-              <span class="chip">React</span><span class="chip">MongoDB</span><span class="chip">Full-Stack</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn btn-mini btn-ghost" target="_blank" rel="noreferrer" href="https://github.com/kajamalan15/movie-recommendation-system">Code</a>
-              <a class="btn btn-mini btn-primary" href="#" aria-disabled="true">Live</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
+        <article class="card project-item" data-category="others">
           <div class="card-media">📈</div>
           <div class="card-body">
-            <h3 class="card-title">📈 Image-Classification-with-CNNs-and-Visual-Explanations-using-Grad-CAM</h3>
-            <p class="card-text">Predicts future demand using historical data to optimize inventory, reduce wastage, and improve planning decisions.</p>
+            <h3 class="card-title">Data Science Job Salaries Dashboard (Tableau)</h3>
+            <p class="card-text">
+              Tableau dashboard visualizing salary trends across job roles, locations,
+              experience levels, and industries to support data-driven career insights.
+            </p>
             <div class="chip-row">
-              <span class="chip">Python</span><span class="chip">Time-Series</span><span class="chip">ML</span>
+              <span class="chip">Tableau</span>
+              <span class="chip">Data Visualization</span>
+              <span class="chip">Analytics</span>
             </div>
             <div class="card-actions">
-              <a class="btn btn-mini btn-ghost" target="_blank" rel="noreferrer" href="https://github.com/kajamalan15/Image-Classification-with-CNNs-and-Visual-Explanations-using-Grad-CAM">Code</a>
-              <a class="btn btn-mini btn-primary" href="#" aria-disabled="true">Live</a>
+              <a class="btn btn-mini btn-ghost" target="_blank"
+                 href="https://github.com/kajamalan15/Data-Science-Job-Salaries-Dashboard">Code</a>
             </div>
           </div>
         </article>
+
+        <article class="card project-item" data-category="others">
+          <div class="card-media">🛒</div>
+          <div class="card-body">
+            <h3 class="card-title">Online Supermarket Management System</h3>
+            <p class="card-text">
+              MERN stack web application developed for Northway Family Mart to transition
+              from offline to online operations. Focused on inventory management, reporting,
+              CRUD operations, and system analytics.
+            </p>
+            <div class="chip-row">
+              <span class="chip">React</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">MERN</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-mini btn-ghost" target="_blank"
+                 href="https://github.com/kajamalan15/Online_Supermarket_Management_System">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-item" data-category="others">
+          <div class="card-media">💊</div>
+          <div class="card-body">
+            <h3 class="card-title">Online Drug & Medicine Manufacturing System</h3>
+            <p class="card-text">
+              Java-based web system focusing on delivery management with full CRUD operations.
+              Built using Java Servlets, Tomcat, and MySQL for pharmaceutical logistics management.
+            </p>
+            <div class="chip-row">
+              <span class="chip">Java</span>
+              <span class="chip">Servlets</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">OOP</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-mini btn-ghost" target="_blank"
+                 href="https://github.com/kajamalan15/Online-drug-and-medicine-manufacturing-system">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-item" data-category="others">
+          <div class="card-media">🚤</div>
+          <div class="card-body">
+            <h3 class="card-title">Boat Safari Management System</h3>
+            <p class="card-text">
+              Web-based management system developed for "Blessed Blue Way" Boat Safari.
+              Implemented manager module, employee management, sponsor handling,
+              and database-driven operations.
+            </p>
+            <div class="chip-row">
+              <span class="chip">PHP</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Web Systems</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-mini btn-ghost" target="_blank"
+                 href="https://github.com/kajamalan15/Boat-Safari-Management">Code</a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -191,63 +371,41 @@
 
       <!-- Skill Cards -->
       <div class="skill-cards">
-
         <div class="glass skill-card">
           <h3>Programming Languages</h3>
           <ul>
-            <li>Python</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C++</li>
-            <li>JavaScript</li>
-            <li>HTML / CSS</li>
-            <li>SQL</li>
+            <li>Python</li><li>Java</li><li>C</li><li>C++</li><li>JavaScript</li><li>HTML / CSS</li><li>SQL</li>
           </ul>
         </div>
 
         <div class="glass skill-card">
           <h3>AI & Machine Learning</h3>
           <ul>
-            <li>Artificial Intelligence</li>
-            <li>Machine Learning</li>
-            <li>Deep Learning</li>
-            <li>Natural Language Processing (NLP)</li>
-            <li>Large Language Models (LLMs)</li>
+            <li>Artificial Intelligence</li><li>Machine Learning</li><li>Deep Learning</li>
+            <li>Natural Language Processing (NLP)</li><li>Large Language Models (LLMs)</li>
           </ul>
         </div>
 
         <div class="glass skill-card">
           <h3>ML Libraries & Tools</h3>
           <ul>
-            <li>TensorFlow</li>
-            <li>PyTorch</li>
-            <li>Scikit-learn</li>
-            <li>Pandas</li>
-            <li>NumPy</li>
-            <li>Matplotlib</li>
+            <li>TensorFlow</li><li>PyTorch</li><li>Scikit-learn</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li>
           </ul>
         </div>
 
         <div class="glass skill-card">
           <h3>Backend & Deployment</h3>
           <ul>
-            <li>Flask</li>
-            <li>Streamlit</li>
-            <li>REST APIs</li>
-            <li>Git & GitHub</li>
-            <li>Hugging Face</li>
+            <li>Flask</li><li>Streamlit</li><li>REST APIs</li><li>Git & GitHub</li><li>Hugging Face</li>
           </ul>
         </div>
 
         <div class="glass skill-card">
           <h3>Databases</h3>
           <ul>
-            <li>MongoDB</li>
-            <li>MySQL</li>
-            <li>PostgreSQL (Basic)</li>
+            <li>MongoDB</li><li>MySQL</li><li>PostgreSQL (Basic)</li>
           </ul>
         </div>
-
       </div>
     </div>
   </section>
@@ -270,7 +428,7 @@
       <div class="cert-grid-modern" id="certGrid">
         <article class="cert-item" data-category="tech">
           <div class="cert-thumb">
-            <img src="certificates/img4.jpg" alt="Google Cloud Computing Foundations certificate">
+            <img src="certificates/img4.jpg" alt="Google Cloud certificate">
           </div>
           <div class="cert-body">
             <h3 class="cert-title">Introduction to AI and Machine Learning on Google Cloud</h3>
@@ -281,7 +439,7 @@
 
         <article class="cert-item" data-category="tech">
           <div class="cert-thumb">
-            <img src="certificates/img3.jpg" alt="Oracle Cloud Infrastructure Foundations Associate certificate">
+            <img src="certificates/img3.jpg" alt="SLIIT certificate">
           </div>
           <div class="cert-body">
             <h3 class="cert-title">AI / ML Engineer</h3>
@@ -292,10 +450,10 @@
 
         <article class="cert-item" data-category="tech">
           <div class="cert-thumb">
-            <img src="certificates/img5.jpg" alt="Oracle Cloud Infrastructure AI Foundations Associate certificate">
+            <img src="certificates/img5.jpg" alt="AWS certificate">
           </div>
           <div class="cert-body">
-            <h3 class="cert-title">AWS Academy Cloud Foundations/h3>
+            <h3 class="cert-title">AWS Academy Cloud Foundations</h3>
             <p class="cert-meta">AWS • 2024</p>
             <button class="btn btn-mini btn-primary cert-view" data-img="certificates/img5.jpg" data-title="AWS Academy Cloud Foundations">View</button>
           </div>
@@ -303,7 +461,7 @@
 
         <article class="cert-item" data-category="others">
           <div class="cert-thumb">
-            <img src="certificates/img2.jpg" alt="IBM Data Analytics certificate">
+            <img src="certificates/img2.jpg" alt="IBM certificate">
           </div>
           <div class="cert-body">
             <h3 class="cert-title">IBM Data Analytics</h3>
@@ -314,7 +472,7 @@
 
         <article class="cert-item" data-category="others">
           <div class="cert-thumb">
-            <img src="certificates/img1.jpg" alt="AWS Academy Cloud Foundations certificate">
+            <img src="certificates/img1.jpg" alt="Novitech certificate">
           </div>
           <div class="cert-body">
             <h3 class="cert-title">Data Analytics</h3>
@@ -368,6 +526,7 @@
     </div>
   </section>
 
+
   <!-- CONTACT -->
   <section id="contact" class="section">
     <div class="section-inner glass center">
@@ -408,120 +567,158 @@
   </footer>
 
   <script>
-    // Theme (works for dark + light)
-    function toggleDark() {
-      document.body.classList.toggle("dark");
-      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
-      document.getElementById("themeIcon").textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
-    }
+  // Theme (works for dark + light)
+  function toggleDark() {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+    document.getElementById("themeIcon").textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
+  }
 
-    window.addEventListener("DOMContentLoaded", () => {
-      const t = localStorage.getItem("theme");
-      if (t === "light") document.body.classList.remove("dark");
-      document.getElementById("themeIcon").textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
-    });
+  window.addEventListener("DOMContentLoaded", () => {
+    const t = localStorage.getItem("theme");
+    if (t === "light") document.body.classList.remove("dark");
+    document.getElementById("themeIcon").textContent = document.body.classList.contains("dark") ? "🌙" : "☀️";
+  });
 
-    // Mobile menu
-    function toggleMenu(){
-      document.getElementById("navMenu").classList.toggle("open");
-    }
+  // Mobile menu
+  function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("open");
+  }
 
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener("click", (e) => {
-        const target = document.querySelector(a.getAttribute("href"));
-        if (!target) return;
-        e.preventDefault();
-        document.getElementById("navMenu").classList.remove("open");
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-    });
-
-    // Active link on scroll
-    const sections = ["home","projects","skills","certifications","about","contact"].map(id => document.getElementById(id));
-    const links = [...document.querySelectorAll(".nav-link")];
-
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(en => {
-        if(!en.isIntersecting) return;
-        links.forEach(l => l.classList.remove("active"));
-        const id = en.target.id;
-        const active = links.find(l => l.getAttribute("href") === "#" + id);
-        if(active) active.classList.add("active");
-      });
-    }, { threshold: 0.45 });
-
-    sections.forEach(s => s && obs.observe(s));
-
-    // Fake submit
-    function handleSubmit(e){
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener("click", (e) => {
+      const target = document.querySelector(a.getAttribute("href"));
+      if (!target) return;
       e.preventDefault();
-      const note = document.getElementById("formNote");
-      note.textContent = "✅ Message captured! (Connect Formspree / EmailJS to actually send.)";
-      e.target.reset();
-    }
+      document.getElementById("navMenu").classList.remove("open");
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
 
-    // CERT FILTER + MODAL
-    const certTabs = document.querySelectorAll(".cert-tab");
-    const certItems = document.querySelectorAll(".cert-item");
+  // Active link on scroll
+  const sections = ["home","projects","skills","certifications","about","contact"].map(id => document.getElementById(id));
+  const links = [...document.querySelectorAll(".nav-link")];
 
-    function setActiveTab(targetCat){
-      certTabs.forEach(t => {
-        const active = t.dataset.filter === targetCat;
-        t.classList.toggle("active", active);
-        t.setAttribute("aria-selected", active ? "true" : "false");
-      });
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if(!en.isIntersecting) return;
+      links.forEach(l => l.classList.remove("active"));
+      const id = en.target.id;
+      const active = links.find(l => l.getAttribute("href") === "#" + id);
+      if(active) active.classList.add("active");
+    });
+  }, { threshold: 0.45 });
 
-      certItems.forEach(card => {
-        const show = card.dataset.category === targetCat;
-        card.classList.toggle("is-hidden", !show);
-      });
-    }
+  sections.forEach(s => s && obs.observe(s));
 
-    certTabs.forEach(tab => {
-      tab.addEventListener("click", () => setActiveTab(tab.dataset.filter));
+  // Fake submit
+  function handleSubmit(e){
+    e.preventDefault();
+    const note = document.getElementById("formNote");
+    note.textContent = "✅ Message captured! (Connect Formspree / EmailJS to actually send.)";
+    e.target.reset();
+  }
+
+  // ----------------------------
+  // PROJECT FILTER (Main / Others)
+  // ----------------------------
+  const projectTabs = document.querySelectorAll(".project-tab");
+  const projectItems = document.querySelectorAll(".project-item");
+
+  function setActiveProjectTab(targetCat){
+    projectTabs.forEach(t => {
+      const active = t.dataset.filter === targetCat;
+      t.classList.toggle("active", active);
+      t.setAttribute("aria-selected", active ? "true" : "false");
     });
 
-    // Default tab
-    setActiveTab("tech");
+    projectItems.forEach(card => {
+      const show = card.dataset.category === targetCat;
+      card.classList.toggle("is-hidden", !show);
+    });
+  }
 
-    // Modal viewer
-    const certModal = document.getElementById("certModal");
-    const certModalImg = document.getElementById("certModalImg");
-    const certModalTitle = document.getElementById("certModalTitle");
-    const certModalClose = document.getElementById("certModalClose");
+  projectTabs.forEach(tab => {
+    tab.addEventListener("click", () => setActiveProjectTab(tab.dataset.filter));
+  });
 
-    function openCertModal(imgSrc, title){
-      certModal.classList.add("open");
-      certModal.setAttribute("aria-hidden", "false");
-      certModalImg.src = imgSrc;
-      certModalImg.alt = title + " certificate";
-      certModalTitle.textContent = title || "Certificate";
-      document.body.style.overflow = "hidden";
-    }
+  // Default: show ONLY first 3 (Main)
+  window.addEventListener("DOMContentLoaded", () => {
+    setActiveProjectTab("main");
+  });
 
-    function closeCertModal(){
-      certModal.classList.remove("open");
-      certModal.setAttribute("aria-hidden", "true");
-      certModalImg.src = "";
-      document.body.style.overflow = "";
-    }
+  // When clicking navbar Projects or hero button -> always reset to Main
+  const navProjects = document.getElementById("navProjects");
+  const ctaProjects = document.getElementById("ctaProjects");
 
-    document.querySelectorAll(".cert-view").forEach(btn => {
-      btn.addEventListener("click", () => {
-        openCertModal(btn.dataset.img, btn.dataset.title);
-      });
+  if (navProjects) navProjects.addEventListener("click", () => setActiveProjectTab("main"));
+  if (ctaProjects) ctaProjects.addEventListener("click", () => setActiveProjectTab("main"));
+
+  // ----------------------------
+  // CERT FILTER + MODAL
+  // ----------------------------
+  const certTabs = document.querySelectorAll(".cert-tab");
+  const certItems = document.querySelectorAll(".cert-item");
+
+  function setActiveTab(targetCat){
+    certTabs.forEach(t => {
+      const active = t.dataset.filter === targetCat;
+      t.classList.toggle("active", active);
+      t.setAttribute("aria-selected", active ? "true" : "false");
     });
 
-    certModalClose.addEventListener("click", closeCertModal);
-
-    certModal.addEventListener("click", (e) => {
-      if (e.target && e.target.dataset && e.target.dataset.close === "true") closeCertModal();
+    certItems.forEach(card => {
+      const show = card.dataset.category === targetCat;
+      card.classList.toggle("is-hidden", !show);
     });
+  }
 
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && certModal.classList.contains("open")) closeCertModal();
+  certTabs.forEach(tab => {
+    tab.addEventListener("click", () => setActiveTab(tab.dataset.filter));
+  });
+
+  // Default tab
+  setActiveTab("tech");
+
+  // Modal viewer
+  const certModal = document.getElementById("certModal");
+  const certModalImg = document.getElementById("certModalImg");
+  const certModalTitle = document.getElementById("certModalTitle");
+  const certModalClose = document.getElementById("certModalClose");
+
+  function openCertModal(imgSrc, title){
+    certModal.classList.add("open");
+    certModal.setAttribute("aria-hidden", "false");
+    certModalImg.src = imgSrc;
+    certModalImg.alt = title + " certificate";
+    certModalTitle.textContent = title || "Certificate";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeCertModal(){
+    certModal.classList.remove("open");
+    certModal.setAttribute("aria-hidden", "true");
+    certModalImg.src = "";
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll(".cert-view").forEach(btn => {
+    btn.addEventListener("click", () => {
+      openCertModal(btn.dataset.img, btn.dataset.title);
     });
-  </script>
+  });
+
+  certModalClose.addEventListener("click", closeCertModal);
+
+  certModal.addEventListener("click", (e) => {
+    if (e.target && e.target.dataset && e.target.dataset.close === "true") closeCertModal();
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && certModal.classList.contains("open")) closeCertModal();
+  });
+</script>
+
 </body>
 </html>
